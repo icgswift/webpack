@@ -25,16 +25,18 @@
 
   查看全局安装的npm包 $ npm list -g --depth 0
 
-  4.没有全局安装的包命令行调用方式    4.1 配置package.json下"scripts" $ npm XXX
+  4.没有全局安装的包命令行调用方式    4.1 配置package.json下"scripts" $ npm run XXX(原理同4.4前一种方式)
                                    4.2 $ node-modules/.bin/XXX (失败 原因不明)
                                    4.3 进入node-modules/.bin $ XXX(默认配置失效，拿webpack来说entry.js ...需自行配置)
-                                   4.4 $ npx
+                                   4.4 $ npx  (本质上和4.3方法相同：1.通过模块名调用.bin目录下的package 2.如没有找到package下载使用后删除)
 
   5.package.json中main.js: 包的主入口 通过require(包名)main.js的exports被返回 设置pravate:true并删除main.js确保安装包私有/代码意外发布 
 
   6.--save-dev vs --save   打包到生产环境bundle            npm install --save
                            用于开发环境(linter/测试库...)  npm install --save-dev 
 
-# 使用配置文件 npx webpack --config XXX(自定义,复杂配置可以拆分为多个文件)                                               
+# 使用配置文件 npx webpack --config XXX(自定义,复杂配置可以拆分为多个文件)   
+
+# 使用package.json "scripts"打包  见4.1
    
  
