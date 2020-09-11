@@ -1,0 +1,13 @@
+.hello {
+    color: red;
+    transition: all 1s ease-in;
+}
+
+::placeholder {
+    color: gray;
+}
+
+.hello:hover {
+    color: aqua;
+    transform: translateY(50px);
+}

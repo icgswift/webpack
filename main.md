@@ -38,5 +38,7 @@
 # 使用配置文件 npx webpack --config XXX(自定义,复杂配置可以拆分为多个文件)   
 
 # 使用package.json "scripts"打包  见4.1
+
+# webpack中使用postcss 1.为css文件添加postcss-loader 2.配置postcss.config.js
    
  
